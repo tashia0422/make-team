@@ -40,11 +40,6 @@ async def group(ctx, specified_num=1):
     make_team = MakeTeam()
     msg = make_team.make_specified_len(ctx,specified_num)
     await ctx.channel.send(msg)
- # ヘルプ   
-@bot.command()
-async def ping(ctx):
-    await ctx.send('  
-                  pong')  
    
 
 """botの接続と起動"""
