@@ -40,6 +40,23 @@ async def group(ctx, specified_num=1):
     make_team = MakeTeam()
     msg = make_team.make_specified_len(ctx,specified_num)
     await ctx.channel.send(msg)
+ # ヘルプ   
+@bot.command()
+async def ping(ctx):
+    await ctx.send('  
+                   /team [チーム数]
+                    指定した数のチームを作成
+                    メンバー数が同じになるように作成
+                    チーム数を指定しなくても実行可。デフォルトで"2"を指定
+                    /team_norem [チーム数]
+                     指定した数のチームを作成
+                     人数差は考慮されないまま、指定されたチーム数を作成
+                    チーム数を指定しなくても実行可。デフォルトで"2"を指定
+                    /group [メンバー数]
+                    指定したメンバー数でチームを作成
+                    メンバー数を指定しない場合、デフォルトとして"1"を指定
+                   ')  
+   
 
 """botの接続と起動"""
 bot.run(token)
